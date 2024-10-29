@@ -6,7 +6,7 @@ def forkbomb(app):
     
     while True:
         os.startfile(app)
-
+    
 
 
 def payload_attack():
@@ -24,7 +24,21 @@ def payload_attack():
     auto.keyUp("enter")
 
 
+
+def if_inputis_wrong():
+    auto.keyDown("win")
+    auto.keyDown("r")
+    
+    auto.keyUp("r")
+    auto.keyUp("win")
+    auto.write("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+    auto.keyDown("enter")
+    auto.keyUp("enter")
+
+
 HackingInput = int(input("press 1 for forkbomb or press 2 for payload attack\n"))
+
+
 
 if HackingInput == 1:
     application = str(input("enter the file path for the app you want to open in the forkbomb\n"))
@@ -32,3 +46,5 @@ if HackingInput == 1:
 elif HackingInput == 2:
 
     payload_attack()
+else:
+    if_inputis_wrong()
